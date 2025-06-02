@@ -1,0 +1,48 @@
+[0.036s] Invoking command in '/home/armrs/drone_racing_ros2_ws/build/tello_description': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/armrs/drone_racing_ros2_ws/build/tello_description -- -j4 -l4
+[0.148s] [ 11%] [34m[1mGenerate /home/armrs/drone_racing_ros2_ws/build/tello_description/urdf/tello.urdf[0m
+[0.175s] [ 22%] [34m[1mGenerate /home/armrs/drone_racing_ros2_ws/build/tello_description/urdf/tello_6.urdf[0m
+[0.181s] [ 33%] [34m[1mGenerate /home/armrs/drone_racing_ros2_ws/build/tello_description/urdf/tello_1.urdf[0m
+[0.205s] [ 44%] [34m[1mGenerate /home/armrs/drone_racing_ros2_ws/build/tello_description/urdf/tello_3.urdf[0m
+[0.259s] [ 44%] Built target generate_urdf
+[0.273s] [ 44%] Built target generate_urdf_1
+[0.313s] [ 44%] Built target generate_urdf_6
+[0.316s] [ 55%] [34m[1mGenerate /home/armrs/drone_racing_ros2_ws/build/tello_description/urdf/tello_4.urdf[0m
+[0.324s] [ 55%] Built target generate_urdf_3
+[0.341s] [ 66%] [34m[1mGenerate /home/armrs/drone_racing_ros2_ws/build/tello_description/urdf/tello_8.urdf[0m
+[0.375s] [ 77%] [34m[1mGenerate /home/armrs/drone_racing_ros2_ws/build/tello_description/urdf/tello_5.urdf[0m
+[0.386s] [ 77%] Built target generate_urdf_4
+[0.390s] [ 88%] [34m[1mGenerate /home/armrs/drone_racing_ros2_ws/build/tello_description/urdf/tello_7.urdf[0m
+[0.416s] [ 88%] Built target generate_urdf_8
+[0.434s] [100%] [34m[1mGenerate /home/armrs/drone_racing_ros2_ws/build/tello_description/urdf/tello_2.urdf[0m
+[0.453s] [100%] Built target generate_urdf_5
+[0.463s] [100%] Built target generate_urdf_7
+[0.487s] [100%] Built target generate_urdf_2
+[0.510s] Invoked command in '/home/armrs/drone_racing_ros2_ws/build/tello_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/armrs/drone_racing_ros2_ws/build/tello_description -- -j4 -l4
+[0.512s] Invoking command in '/home/armrs/drone_racing_ros2_ws/build/tello_description': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/armrs/drone_racing_ros2_ws/build/tello_description
+[0.531s] -- Install configuration: ""
+[0.531s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/urdf
+[0.531s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/urdf/tello_7.urdf
+[0.532s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/urdf/tello.urdf
+[0.532s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/urdf/tello_2.urdf
+[0.532s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/urdf/tello_3.urdf
+[0.532s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/urdf/tello_6.urdf
+[0.533s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/urdf/tello_1.urdf
+[0.533s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/urdf/tello_5.urdf
+[0.533s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/urdf/tello_8.urdf
+[0.533s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/urdf/tello_4.urdf
+[0.533s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/ament_index/resource_index/package_run_dependencies/tello_description
+[0.534s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/ament_index/resource_index/parent_prefix_path/tello_description
+[0.534s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/environment/ament_prefix_path.sh
+[0.534s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/environment/ament_prefix_path.dsv
+[0.534s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/environment/path.sh
+[0.534s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/environment/path.dsv
+[0.535s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/local_setup.bash
+[0.535s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/local_setup.sh
+[0.535s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/local_setup.zsh
+[0.535s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/local_setup.dsv
+[0.535s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/package.dsv
+[0.536s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/ament_index/resource_index/packages/tello_description
+[0.536s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/cmake/tello_descriptionConfig.cmake
+[0.536s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/cmake/tello_descriptionConfig-version.cmake
+[0.536s] -- Up-to-date: /home/armrs/drone_racing_ros2_ws/install/tello_description/share/tello_description/package.xml
+[0.539s] Invoked command in '/home/armrs/drone_racing_ros2_ws/build/tello_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/armrs/drone_racing_ros2_ws/build/tello_description

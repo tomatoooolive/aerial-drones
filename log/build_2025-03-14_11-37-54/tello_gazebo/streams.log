@@ -1,0 +1,106 @@
+[0.023s] Invoking command in '/home/armrs/drone_racing_ros2_ws/build/tello_gazebo': AMENT_PREFIX_PATH=/home/armrs/drone_racing_ros2_ws/install/tello_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/armrs/drone_racing_ros2_ws/install/tello_msgs:/opt/ros/galactic LD_LIBRARY_PATH=/home/armrs/drone_racing_ros2_ws/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/armrs/drone_racing_ros2_ws/install/tello_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/tello_ros/tello_gazebo -DCMAKE_INSTALL_PREFIX=/home/armrs/drone_racing_ros2_ws/install/tello_gazebo
+[0.095s] -- The C compiler identification is GNU 9.4.0
+[0.168s] -- The CXX compiler identification is GNU 9.4.0
+[0.175s] -- Check for working C compiler: /usr/bin/cc
+[0.259s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.260s] -- Detecting C compiler ABI info
+[0.342s] -- Detecting C compiler ABI info - done
+[0.364s] -- Detecting C compile features
+[0.365s] -- Detecting C compile features - done
+[0.367s] -- Check for working CXX compiler: /usr/bin/c++
+[0.464s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.465s] -- Detecting CXX compiler ABI info
+[0.562s] -- Detecting CXX compiler ABI info - done
+[0.575s] -- Detecting CXX compile features
+[0.576s] -- Detecting CXX compile features - done
+[0.578s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.607s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.607s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.704s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+[0.710s] -- Checking for module 'bullet>=2.82'
+[0.729s] --   Found bullet, version 2.88
+[0.886s] -- Found ccd: /usr/include (found suitable version "2.0", minimum required is "2.0") 
+[0.958s] -- Found fcl: /usr/include (found suitable version "0.5.0", minimum required is "0.3.2") 
+[1.030s] -- Found assimp: /usr/include (found version "5.0.0") 
+[1.058s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[1.425s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found suitable version "1.71.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+[1.452s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1") 
+[1.457s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.464s] -- Searching for dependencies of ignition-math6
+[1.466s] -- Looking for OGRE...
+[1.467s] -- OGRE_PREFIX_WATCH changed.
+[1.472s] -- Checking for module 'OGRE'
+[1.491s] --   Found OGRE, version 1.9.0
+[1.554s] -- Found Ogre Ghadamon (1.9.0)
+[1.569s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[1.587s] -- Looking for OGRE_Paging...
+[1.599s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[1.599s] -- Looking for OGRE_Terrain...
+[1.610s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[1.610s] -- Looking for OGRE_Property...
+[1.622s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[1.622s] -- Looking for OGRE_RTShaderSystem...
+[1.635s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[1.635s] -- Looking for OGRE_Volume...
+[1.646s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[1.646s] -- Looking for OGRE_Overlay...
+[1.659s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[1.905s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.907s] -- Looking for ignition-transport8 -- found version 8.3.0
+[1.908s] -- Searching for dependencies of ignition-transport8
+[1.937s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.6.1", minimum required is "3") 
+[1.955s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[1.962s] -- Checking for module 'libzmq >= 4'
+[1.984s] --   Found libzmq , version 4.3.2
+[2.040s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[2.046s] -- Checking for module 'uuid'
+[2.066s] --   Found uuid, version 2.34.0
+[2.116s] -- Found UUID: TRUE  
+[2.118s] -- Looking for ignition-msgs5 -- found version 5.10.0
+[2.119s] -- Searching for dependencies of ignition-msgs5
+[2.141s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.147s] -- Checking for module 'tinyxml2'
+[2.166s] --   Found tinyxml2, version 6.2.0
+[2.219s] -- Looking for ignition-msgs5 -- found version 5.10.0
+[2.221s] -- Looking for ignition-common3 -- found version 3.14.2
+[2.221s] -- Searching for dependencies of ignition-common3
+[2.222s] -- Looking for dlfcn.h - found
+[2.223s] -- Looking for libdl - found
+[2.224s] -- Found DL: TRUE  
+[2.234s] -- Searching for <ignition-common3> component [graphics]
+[2.236s] -- Looking for ignition-common3-graphics -- found version 3.14.2
+[2.237s] -- Searching for dependencies of ignition-common3-graphics
+[2.237s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.240s] -- Looking for ignition-fuel_tools4 -- found version 4.6.0
+[2.241s] -- Searching for dependencies of ignition-fuel_tools4
+[2.347s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.68.0")  
+[2.360s] -- Checking for module 'jsoncpp'
+[2.383s] --   Found jsoncpp, version 1.7.4
+[2.442s] -- Found JSONCPP: TRUE  
+[2.452s] -- Checking for module 'libzip'
+[2.476s] --   Found libzip, version 1.5.1
+[2.531s] -- Found ZIP: TRUE  
+[2.532s] -- Looking for ignition-common3 -- found version 3.14.2
+[2.532s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.533s] -- Looking for ignition-msgs5 -- found version 5.10.0
+[2.547s] CMake Error at CMakeLists.txt:28 (find_package):
+[2.547s]   By not providing "Findgazebo_dev.cmake" in CMAKE_MODULE_PATH this project
+[2.547s]   has asked CMake to find a package configuration file provided by
+[2.548s]   "gazebo_dev", but CMake did not find one.
+[2.548s] 
+[2.548s]   Could not find a package configuration file provided by "gazebo_dev" with
+[2.548s]   any of the following names:
+[2.548s] 
+[2.549s]     gazebo_devConfig.cmake
+[2.549s]     gazebo_dev-config.cmake
+[2.549s] 
+[2.549s]   Add the installation prefix of "gazebo_dev" to CMAKE_PREFIX_PATH or set
+[2.549s]   "gazebo_dev_DIR" to a directory containing one of the above files.  If
+[2.550s]   "gazebo_dev" provides a separate development package or SDK, be sure it has
+[2.550s]   been installed.
+[2.551s] 
+[2.553s] 
+[2.554s] -- Configuring incomplete, errors occurred!
+[2.555s] See also "/home/armrs/drone_racing_ros2_ws/build/tello_gazebo/CMakeFiles/CMakeOutput.log".
+[2.556s] See also "/home/armrs/drone_racing_ros2_ws/build/tello_gazebo/CMakeFiles/CMakeError.log".
+[2.564s] Invoked command in '/home/armrs/drone_racing_ros2_ws/build/tello_gazebo' returned '1': AMENT_PREFIX_PATH=/home/armrs/drone_racing_ros2_ws/install/tello_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/armrs/drone_racing_ros2_ws/install/tello_msgs:/opt/ros/galactic LD_LIBRARY_PATH=/home/armrs/drone_racing_ros2_ws/install/tello_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/armrs/drone_racing_ros2_ws/install/tello_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/tello_ros/tello_gazebo -DCMAKE_INSTALL_PREFIX=/home/armrs/drone_racing_ros2_ws/install/tello_gazebo

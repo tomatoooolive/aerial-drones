@@ -1,0 +1,29 @@
+[0.033s] Invoking command in '/home/armrs/drone_racing_ros2_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/armrs/drone_racing_ros2_ws/build/tello_msgs -- -j4 -l4
+[0.171s] [  2%] Built target tello_msgs__cpp
+[0.184s] [ 12%] Built target tello_msgs__rosidl_generator_c
+[0.222s] [ 23%] Built target tello_msgs__rosidl_typesupport_cpp
+[0.232s] [ 34%] Built target tello_msgs__rosidl_typesupport_introspection_cpp
+[0.236s] [ 44%] Built target tello_msgs__rosidl_typesupport_introspection_c
+[0.247s] [ 55%] Built target tello_msgs__rosidl_typesupport_fastrtps_cpp
+[0.262s] [ 65%] Built target tello_msgs__rosidl_typesupport_c
+[0.283s] [ 76%] Built target tello_msgs__rosidl_typesupport_fastrtps_c
+[0.309s] [ 76%] Built target tello_msgs
+[0.337s] [ 78%] Built target tello_msgs__py
+[0.354s] [35m[1mScanning dependencies of target tello_msgs__python[0m
+[0.383s] [ 80%] [32mBuilding C object CMakeFiles/tello_msgs__python.dir/rosidl_generator_py/tello_msgs/msg/_flight_data_s.c.o[0m
+[0.385s] [ 85%] [32mBuilding C object CMakeFiles/tello_msgs__python.dir/rosidl_generator_py/tello_msgs/srv/_tello_action_s.c.o[0m
+[0.385s] [ 85%] [32mBuilding C object CMakeFiles/tello_msgs__python.dir/rosidl_generator_py/tello_msgs/msg/_tello_response_s.c.o[0m
+[0.658s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/tello_msgs/libtello_msgs__python.so[0m
+[0.725s] [ 87%] Built target tello_msgs__python
+[0.741s] [35m[1mScanning dependencies of target tello_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[0.744s] [35m[1mScanning dependencies of target tello_msgs__rosidl_typesupport_c__pyext[0m
+[0.745s] [35m[1mScanning dependencies of target tello_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[0.766s] [ 89%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[0.780s] [ 91%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[0.785s] [ 93%] [32mBuilding C object CMakeFiles/tello_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/tello_msgs/_tello_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[0.912s] [ 95%] [32m[1mLinking CXX shared library rosidl_generator_py/tello_msgs/tello_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[0.943s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/tello_msgs/tello_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[0.948s] [100%] [32m[1mLinking C shared library rosidl_generator_py/tello_msgs/tello_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[0.998s] [100%] Built target tello_msgs__rosidl_typesupport_introspection_c__pyext
+[1.016s] [100%] Built target tello_msgs__rosidl_typesupport_c__pyext
+[1.045s] [100%] Built target tello_msgs__rosidl_typesupport_fastrtps_c__pyext

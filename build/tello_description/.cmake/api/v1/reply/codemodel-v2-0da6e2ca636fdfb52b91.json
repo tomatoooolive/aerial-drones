@@ -1,0 +1,150 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "tello_description",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_urdf::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_urdf-dfdacd30558360105b1e.json",
+					"name" : "generate_urdf",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_urdf_1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_urdf_1-98459cedf9f8f53f3ec9.json",
+					"name" : "generate_urdf_1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_urdf_2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_urdf_2-6ccecb02a83f5bd77f51.json",
+					"name" : "generate_urdf_2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_urdf_3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_urdf_3-e56fd2a1a65e61359e61.json",
+					"name" : "generate_urdf_3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_urdf_4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_urdf_4-4ec81ff1874ecd7adfc5.json",
+					"name" : "generate_urdf_4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_urdf_5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_urdf_5-b459d3bcb3e06c7c2a3d.json",
+					"name" : "generate_urdf_5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_urdf_6::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_urdf_6-896f6820516d1daa87de.json",
+					"name" : "generate_urdf_6",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_urdf_7::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_urdf_7-b83fba143e0b0246e7f7.json",
+					"name" : "generate_urdf_7",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_urdf_8::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_urdf_8-c282df97d74ac118686c.json",
+					"name" : "generate_urdf_8",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tello_description_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tello_description_uninstall-7a16c0277b8d41159cd2.json",
+					"name" : "tello_description_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-d47a11094d3b9df18389.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/armrs/drone_racing_ros2_ws/build/tello_description",
+		"source" : "/home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/tello_ros/tello_description"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

@@ -1,0 +1,10 @@
+make[2]: *** No rule to make target '/home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/tello_ros/tello_description/urdf/tello.xml', needed by 'urdf/tello.urdf'.  Stop.
+make[2]: *** No rule to make target '/home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/tello_ros/tello_description/urdf/tello.xml', needed by 'urdf/tello_6.urdf'.  Stop.
+make[1]: *** [CMakeFiles/Makefile2:148: CMakeFiles/generate_urdf.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:94: CMakeFiles/generate_urdf_6.dir/all] Error 2
+make[2]: *** No rule to make target '/home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/tello_ros/tello_description/urdf/tello.xml', needed by 'urdf/tello_1.urdf'.  Stop.
+make[1]: *** [CMakeFiles/Makefile2:175: CMakeFiles/generate_urdf_1.dir/all] Error 2
+make[2]: *** No rule to make target '/home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/tello_ros/tello_description/urdf/tello.xml', needed by 'urdf/tello_3.urdf'.  Stop.
+make[1]: *** [CMakeFiles/Makefile2:202: CMakeFiles/generate_urdf_3.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

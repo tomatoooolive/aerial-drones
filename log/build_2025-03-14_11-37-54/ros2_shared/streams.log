@@ -1,0 +1,48 @@
+[0.035s] Invoking command in '/home/armrs/drone_racing_ros2_ws/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/ros2_shared -DCMAKE_INSTALL_PREFIX=/home/armrs/drone_racing_ros2_ws/install/ros2_shared
+[0.146s] -- The C compiler identification is GNU 9.4.0
+[0.329s] -- The CXX compiler identification is GNU 9.4.0
+[0.339s] -- Check for working C compiler: /usr/bin/cc
+[0.457s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.459s] -- Detecting C compiler ABI info
+[0.582s] -- Detecting C compiler ABI info - done
+[0.606s] -- Detecting C compile features
+[0.607s] -- Detecting C compile features - done
+[0.612s] -- Check for working CXX compiler: /usr/bin/c++
+[0.738s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.740s] -- Detecting CXX compiler ABI info
+[0.866s] -- Detecting CXX compiler ABI info - done
+[0.885s] -- Detecting CXX compile features
+[0.886s] -- Detecting CXX compile features - done
+[0.889s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.921s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.921s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.121s] -- Configuring done
+[1.125s] -- Generating done
+[1.127s] -- Build files have been written to: /home/armrs/drone_racing_ros2_ws/build/ros2_shared
+[1.132s] Invoked command in '/home/armrs/drone_racing_ros2_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/ros2_shared -DCMAKE_INSTALL_PREFIX=/home/armrs/drone_racing_ros2_ws/install/ros2_shared
+[1.135s] Invoking command in '/home/armrs/drone_racing_ros2_ws/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/armrs/drone_racing_ros2_ws/build/ros2_shared -- -j4 -l4
+[1.188s] Invoked command in '/home/armrs/drone_racing_ros2_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/armrs/drone_racing_ros2_ws/build/ros2_shared -- -j4 -l4
+[1.207s] Invoking command in '/home/armrs/drone_racing_ros2_ws/build/ros2_shared': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/armrs/drone_racing_ros2_ws/build/ros2_shared
+[1.220s] -- Install configuration: ""
+[1.220s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/include
+[1.220s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/include/ros2_shared
+[1.220s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/include/ros2_shared/context_macros.hpp
+[1.221s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/include/ros2_shared/param_macros.hpp
+[1.221s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/include/ros2_shared/string_printf.hpp
+[1.221s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ament_index/resource_index/package_run_dependencies/ros2_shared
+[1.221s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ament_index/resource_index/parent_prefix_path/ros2_shared
+[1.221s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.sh
+[1.221s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ros2_shared/environment/ament_prefix_path.dsv
+[1.222s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ros2_shared/environment/path.sh
+[1.222s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ros2_shared/environment/path.dsv
+[1.222s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ros2_shared/local_setup.bash
+[1.222s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ros2_shared/local_setup.sh
+[1.222s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ros2_shared/local_setup.zsh
+[1.222s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ros2_shared/local_setup.dsv
+[1.223s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ros2_shared/package.dsv
+[1.223s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ament_index/resource_index/packages/ros2_shared
+[1.223s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ros2_shared/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.223s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig.cmake
+[1.224s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ros2_shared/cmake/ros2_sharedConfig-version.cmake
+[1.224s] -- Installing: /home/armrs/drone_racing_ros2_ws/install/ros2_shared/share/ros2_shared/package.xml
+[1.227s] Invoked command in '/home/armrs/drone_racing_ros2_ws/build/ros2_shared' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/armrs/drone_racing_ros2_ws/build/ros2_shared

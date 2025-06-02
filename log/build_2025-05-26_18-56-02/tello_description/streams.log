@@ -1,0 +1,12 @@
+[0.036s] Invoking command in '/home/armrs/drone_racing_ros2_ws/build/tello_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/armrs/drone_racing_ros2_ws/install/ros2_shared:/opt/ros/galactic /usr/bin/cmake --build /home/armrs/drone_racing_ros2_ws/build/tello_description -- -j4 -l4
+[0.132s] make[2]: *** No rule to make target '/home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/tello_ros/tello_description/urdf/tello.xml', needed by 'urdf/tello.urdf'.  Stop.
+[0.134s] make[2]: *** No rule to make target '/home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/tello_ros/tello_description/urdf/tello.xml', needed by 'urdf/tello_6.urdf'.  Stop.
+[0.135s] make[1]: *** [CMakeFiles/Makefile2:148: CMakeFiles/generate_urdf.dir/all] Error 2
+[0.135s] make[1]: *** Waiting for unfinished jobs....
+[0.135s] make[1]: *** [CMakeFiles/Makefile2:94: CMakeFiles/generate_urdf_6.dir/all] Error 2
+[0.138s] make[2]: *** No rule to make target '/home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/tello_ros/tello_description/urdf/tello.xml', needed by 'urdf/tello_1.urdf'.  Stop.
+[0.140s] make[1]: *** [CMakeFiles/Makefile2:175: CMakeFiles/generate_urdf_1.dir/all] Error 2
+[0.147s] make[2]: *** No rule to make target '/home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/tello_ros/tello_description/urdf/tello.xml', needed by 'urdf/tello_3.urdf'.  Stop.
+[0.148s] make[1]: *** [CMakeFiles/Makefile2:202: CMakeFiles/generate_urdf_3.dir/all] Error 2
+[0.151s] make: *** [Makefile:141: all] Error 2
+[0.164s] Invoked command in '/home/armrs/drone_racing_ros2_ws/build/tello_description' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/armrs/drone_racing_ros2_ws/install/ros2_shared:/opt/ros/galactic /usr/bin/cmake --build /home/armrs/drone_racing_ros2_ws/build/tello_description -- -j4 -l4

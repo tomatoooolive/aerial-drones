@@ -1,0 +1,1 @@
+Invoking command in '/home/armrs/drone_racing_ros2_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/armrs/drone_racing_ros2_ws/build/tello_msgs -- -j4 -l4
