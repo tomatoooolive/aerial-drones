@@ -1,6 +1,0 @@
-Invoking command in '/home/armrs/drone_racing_ros2_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/tello_ros/tello_msgs -DCMAKE_INSTALL_PREFIX=/home/armrs/drone_racing_ros2_ws/install/tello_msgs
-Invoked command in '/home/armrs/drone_racing_ros2_ws/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/armrs/drone_racing_ros2_ws/src/drone_racing_ros2/tello_ros/tello_msgs -DCMAKE_INSTALL_PREFIX=/home/armrs/drone_racing_ros2_ws/install/tello_msgs
-Invoking command in '/home/armrs/drone_racing_ros2_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/armrs/drone_racing_ros2_ws/build/tello_msgs -- -j4 -l4
-Invoked command in '/home/armrs/drone_racing_ros2_ws/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/armrs/drone_racing_ros2_ws/build/tello_msgs -- -j4 -l4
-Invoking command in '/home/armrs/drone_racing_ros2_ws/build/tello_msgs': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/armrs/drone_racing_ros2_ws/build/tello_msgs
-Invoked command in '/home/armrs/drone_racing_ros2_ws/build/tello_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/armrs/drone_racing_ros2_ws/build/tello_msgs
