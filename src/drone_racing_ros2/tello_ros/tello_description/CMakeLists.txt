@@ -29,10 +29,40 @@ foreach (INDEX RANGE 0 8)
     COMMENT "Generate ${URDF_FILE}"
     VERBATIM
   )
-  # TODO investigate why configure_file isn't working
-  # configure_file("urdf/tello.xml" ${URDF_FILE})
   add_custom_target(generate_urdf${SUFFIX} ALL DEPENDS ${URDF_FILE})
 endforeach ()
+
+#=============
+# Generate leader_tello.urdf
+#=============
+
+set(LEADER_URDF "${CMAKE_CURRENT_BINARY_DIR}/urdf/leader_tello.urdf")
+add_custom_command(
+  OUTPUT ${LEADER_URDF}
+  COMMAND ${PYTHON_EXECUTABLE} "${CMAKE_CURRENT_SOURCE_DIR}/src/replace.py"
+  "${CMAKE_CURRENT_SOURCE_DIR}/urdf/leader_tello.xml" "suffix=" "topic_ns=leader"
+  ">" "${LEADER_URDF}"
+  DEPENDS urdf/leader_tello.xml
+  COMMENT "Generate ${LEADER_URDF}"
+  VERBATIM
+)
+add_custom_target(generate_leader_urdf ALL DEPENDS ${LEADER_URDF})
+
+#=============
+# Generate follower_tello.urdf
+#=============
+
+set(FOLLOWER_URDF "${CMAKE_CURRENT_BINARY_DIR}/urdf/follower_tello.urdf")
+add_custom_command(
+  OUTPUT ${FOLLOWER_URDF}
+  COMMAND ${PYTHON_EXECUTABLE} "${CMAKE_CURRENT_SOURCE_DIR}/src/replace.py"
+  "${CMAKE_CURRENT_SOURCE_DIR}/urdf/follower_tello.xml" "suffix=" "topic_ns=follower"
+  ">" "${FOLLOWER_URDF}"
+  DEPENDS urdf/follower_tello.xml
+  COMMENT "Generate ${FOLLOWER_URDF}"
+  VERBATIM
+)
+add_custom_target(generate_follower_urdf ALL DEPENDS ${FOLLOWER_URDF})
 
 #=============
 # Install

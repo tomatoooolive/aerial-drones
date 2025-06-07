@@ -7,7 +7,7 @@
 <!-- Group 12 ARMRS 2025 -->
 <!-- Open Project -->
 
-<robot name="FollowerDrone${suffix}">
+<robot name="FollowerDrone">
 
     <!-- Materials -->
     <material name="white">
@@ -191,14 +191,14 @@
         <plugin name="TelloPlugin" filename="libTelloPlugin.so">
             <namespace>${topic_ns}</namespace>
             <parameter name="use_sim_time" type="bool">1</parameter>
-            <link_name>base_link${suffix}</link_name>
+            <link_name>base_link</link_name>
             <center_of_mass>0 0 0</center_of_mass>
         </plugin>
     </gazebo>
     <gazebo>
         <plugin name="ground_truth" filename="libgazebo_ros_p3d.so">
        <frame_name>map</frame_name>
-       <body_name>base_link${suffix}</body_name>
+       <body_name>base_link</body_name>
        <ros>
           <namespace>/${topic_ns}</namespace>
           <!-- <remapping>odom:=p3d_test_deprecated</remapping> -->

@@ -10,7 +10,7 @@ from gazebo_msgs.srv import SpawnEntity
 from geometry_msgs.msg import Pose
 
 
-def inject(xml: str, initial_pose: Pose):
+def inject(name: str, xml: str, initial_pose: Pose):
     """Create a ROS node, and use it to call the SpawnEntity service"""
 
     rclpy.init()
@@ -22,8 +22,10 @@ def inject(xml: str, initial_pose: Pose):
         client.wait_for_service()
 
     request = SpawnEntity.Request()
+    request.name = name
     request.xml = xml
     request.initial_pose = initial_pose
+
     future = client.call_async(request)
     rclpy.spin_until_future_complete(node, future)
 
@@ -36,8 +38,9 @@ def inject(xml: str, initial_pose: Pose):
     rclpy.shutdown()
 
 
-if len(sys.argv) < 6:
-    print('usage: ros2 run tello_gazebo inject_entity.py -- foo.urdf initial_x initial_y initial_z initial_yaw')
+# Updated argument check
+if len(sys.argv) < 7:
+    print('usage: ros2 run tello_gazebo inject_entity.py -- foo.urdf initial_x initial_y initial_z initial_yaw model_name')
     sys.exit(1)
 
 f = open(sys.argv[1], 'r')
@@ -52,4 +55,6 @@ p.orientation.x = q[1]
 p.orientation.y = q[2]
 p.orientation.z = q[3]
 
-inject(f.read(), p)
+model_name = sys.argv[6]
+
+inject(model_name, f.read(), p)
