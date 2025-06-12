@@ -1,0 +1,4 @@
+[console_scripts]
+follower_cmd_listener = tello_comm.follower_cmd_listener:main
+leader_cmd_pub = tello_comm.leader_cmd_pub:main
+

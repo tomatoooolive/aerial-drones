@@ -1,0 +1,33 @@
+running egg_info
+creating build/tello_comm/tello_comm.egg-info
+writing build/tello_comm/tello_comm.egg-info/PKG-INFO
+writing dependency_links to build/tello_comm/tello_comm.egg-info/dependency_links.txt
+writing entry points to build/tello_comm/tello_comm.egg-info/entry_points.txt
+writing requirements to build/tello_comm/tello_comm.egg-info/requires.txt
+writing top-level names to build/tello_comm/tello_comm.egg-info/top_level.txt
+writing manifest file 'build/tello_comm/tello_comm.egg-info/SOURCES.txt'
+reading manifest file 'build/tello_comm/tello_comm.egg-info/SOURCES.txt'
+writing manifest file 'build/tello_comm/tello_comm.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/build
+creating /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/build/lib
+creating /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/build/lib/tello_comm
+copying tello_comm/__init__.py -> /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/build/lib/tello_comm
+running install
+running install_lib
+creating /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/python3.8/site-packages/tello_comm
+copying /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/build/lib/tello_comm/__init__.py -> /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/python3.8/site-packages/tello_comm
+byte-compiling /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/python3.8/site-packages/tello_comm/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/share/ament_index
+creating /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/share/ament_index/resource_index
+creating /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/share/ament_index/resource_index/packages
+copying resource/tello_comm -> /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/share/ament_index/resource_index/packages
+copying package.xml -> /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/share/tello_comm
+running install_egg_info
+Copying build/tello_comm/tello_comm.egg-info to /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/python3.8/site-packages/tello_comm-0.0.0-py3.8.egg-info
+running install_scripts
+Installing follower_cmd_listener script to /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/tello_comm
+Installing leader_cmd_pub script to /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/tello_comm
+writing list of installed files to '/home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/install.log'

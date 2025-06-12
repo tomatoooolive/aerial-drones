@@ -1,0 +1,28 @@
+[0.377s] Invoking command in '/home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm': PYTHONPATH=/home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/tello_comm build --build-base /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/build install --record /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/install.log --single-version-externally-managed install_data
+[0.495s] running egg_info
+[0.495s] writing build/tello_comm/tello_comm.egg-info/PKG-INFO
+[0.495s] writing dependency_links to build/tello_comm/tello_comm.egg-info/dependency_links.txt
+[0.495s] writing entry points to build/tello_comm/tello_comm.egg-info/entry_points.txt
+[0.495s] writing requirements to build/tello_comm/tello_comm.egg-info/requires.txt
+[0.495s] writing top-level names to build/tello_comm/tello_comm.egg-info/top_level.txt
+[0.514s] reading manifest file 'build/tello_comm/tello_comm.egg-info/SOURCES.txt'
+[0.514s] writing manifest file 'build/tello_comm/tello_comm.egg-info/SOURCES.txt'
+[0.514s] running build
+[0.515s] running build_py
+[0.515s] copying tello_comm/leader_cmd_pub.py -> /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/build/lib/tello_comm
+[0.515s] copying tello_comm/follower_cmd_listener.py -> /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/build/lib/tello_comm
+[0.515s] running install
+[0.515s] running install_lib
+[0.516s] copying /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/build/lib/tello_comm/leader_cmd_pub.py -> /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/python3.8/site-packages/tello_comm
+[0.516s] copying /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/build/lib/tello_comm/follower_cmd_listener.py -> /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/python3.8/site-packages/tello_comm
+[0.516s] byte-compiling /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/python3.8/site-packages/tello_comm/leader_cmd_pub.py to leader_cmd_pub.cpython-38.pyc
+[0.517s] byte-compiling /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/python3.8/site-packages/tello_comm/follower_cmd_listener.py to follower_cmd_listener.cpython-38.pyc
+[0.517s] running install_data
+[0.517s] running install_egg_info
+[0.518s] removing '/home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/python3.8/site-packages/tello_comm-0.0.0-py3.8.egg-info' (and everything under it)
+[0.518s] Copying build/tello_comm/tello_comm.egg-info to /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/python3.8/site-packages/tello_comm-0.0.0-py3.8.egg-info
+[0.518s] running install_scripts
+[0.529s] Installing follower_cmd_listener script to /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/tello_comm
+[0.529s] Installing leader_cmd_pub script to /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/tello_comm
+[0.529s] writing list of installed files to '/home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/install.log'
+[0.543s] Invoked command in '/home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm' returned '0': PYTHONPATH=/home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/install/tello_comm/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/tello_comm build --build-base /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/build install --record /home/ayesha/Documents/OpenProj/aerial-drones/src/drone_racing_ros2/tello_ros/tello_comm/build/tello_comm/install.log --single-version-externally-managed install_data
