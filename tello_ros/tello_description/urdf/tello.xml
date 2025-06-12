@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+
+<!-- Body coordinates are: x forward, y left, z up; rotation is: roll right, pitch forward, yaw left -->
+<!-- See http://www.ros.org/reps/rep-0103.html -->
+
+<!-- Based on Salma Salimis work. -->
+<!-- Group 12 ARMRS 2025 -->
+<!-- Open Project -->
+
+<robot name="LeaderDrone">
+
+    <!-- Materials -->
+    <material name="white">
+        <color rgba="0.9 0.9 0.9 1.0"/>
+    </material>
+    <material name="red">
+        <color rgba="1.0 0 0 1.0"/>
+    </material>
+    <material name="blue">
+        <color rgba="0.53 0.81 0.98 1.0"/>
+    </material>
+    <material name="green">
+        <color rgba="0.0 0.5 0.0 1.0"/>
+    </material>
+    <material name="gold">
+    	<color rgba="0.83 0.69 0.22 1.0"/>
+    </material>
+
+        <!-- Enlarged Base link with four propellers -->
+    <link name="base_link">
+        <!-- Central body -->
+        <visual>
+            <origin xyz="0 0 0.14"/>
+            <geometry>
+                <cylinder length="0.08" radius="0.3"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+
+        <!-- Four propellers -->
+        <visual>
+            <origin xyz="0.22 0.22 0.19"/>
+            <geometry>
+                <cylinder length="0.02" radius="0.18"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+        <visual>
+            <origin xyz="-0.22 0.22 0.19"/>
+            <geometry>
+                <cylinder length="0.02" radius="0.18"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+        <visual>
+            <origin xyz="-0.22 -0.22 0.19"/>
+            <geometry>
+                <cylinder length="0.02" radius="0.18"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+        <visual>
+            <origin xyz="0.22 -0.22 0.19"/>
+            <geometry>
+                <cylinder length="0.02" radius="0.18"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+        <collision name="collision">
+            <geometry>
+                <cylinder length="0.46" radius="0.5"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1.5"/>
+            <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+        </inertial>
+    </link>
+
+    <!-- GNSS Sensor -->
+    <link name="gnss_link">
+        <visual>
+            <origin xyz="0 0 0.18"/>
+            <geometry>
+                <box size="0.04 0.04 0.01"/>
+            </geometry>
+            <material name="gold"/>
+        </visual>
+        <inertial>
+            <mass value="0.01"/>
+            <inertia ixx="1e-5" ixy="0" ixz="0" iyy="1e-5" iyz="0" izz="1e-5"/>
+        </inertial>
+    </link>
+    <joint name="gnss_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="gnss_link"/>
+    </joint>
+
+    <!-- WiFi Module -->
+    <link name="wifi_link">
+        <visual>
+            <origin xyz="0.06 0 0.13"/>
+            <geometry>
+                <cylinder length="0.02" radius="0.015"/>
+            </geometry>
+            <material name="green"/>
+        </visual>
+        <inertial>
+            <mass value="0.01"/>
+            <inertia ixx="1e-5" ixy="0" ixz="0" iyy="1e-5" iyz="0" izz="1e-5"/>
+        </inertial>
+    </link>
+    <joint name="wifi_joint" type="fixed">
+        <origin xyz="0.1 0 0.05" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="wifi_link"/>
+    </joint>
+
+    <!-- Ray (ToF) Sensor -->
+    <link name="ray_link">
+        <visual>
+            <origin xyz="0.30 0 0.16"/>
+            <geometry>
+                <box size="0.03 0.03 0.03"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+        <inertial>
+            <mass value="0.005"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
+        </inertial>
+    </link>
+    <joint name="ray_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="ray_link"/>
+    </joint>
+
+    <!-- Cargo Hold -->
+    <link name="cargo_link">
+        <visual>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="0.3 0.3 0.2"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+        <inertial>
+            <mass value="0.3"/>
+            <inertia ixx="0.02" ixy="0" ixz="0" iyy="0.02" iyz="0" izz="0.02"/>
+        </inertial>
+    </link>
+    <joint name="cargo_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="cargo_link"/>
+    </joint>
+
+
+    <!-- Camera link -->
+    <link name="camera_link">
+        <visual>
+            <origin xyz="0.3 0 0.10"/>
+            <geometry>
+                <sphere radius="0.04"/>
+            </geometry>
+            <material name="red">
+        	<color rgba="1.0 0 0 1.0"/>
+   	    </material>
+        </visual>
+        <inertial>
+            <mass value="1e-5"/>
+            <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
+        </inertial>
+    </link>
+    <joint name="camera_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="camera_link"/>
+    </joint>
+
+    <!-- IMU Link (Smaller than camera: 0.008m cube) -->
+    <link name="imu_link">
+        <visual>
+            <origin xyz="-0.08 0 0.164"/>
+            <geometry>
+                <box size="0.06 0.06 0.05"/>  <!-- Tiny cube -->
+            </geometry>
+            <material name="green">
+       	 <color rgba="0.0 0.5 0.0 1.0"/>
+   	    </material>
+        </visual>
+        <inertial>
+            <mass value="5e-6"/>  <!-- Very lightweight -->
+            <inertia ixx="1e-7" ixy="0" ixz="0" iyy="1e-7" iyz="0" izz="1e-7"/>
+        </inertial>
+    </link>
+    <joint name="imu_joint" type="fixed">
+        <origin xyz="0 0 0.024" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="imu_link"/>
+    </joint>
+
+
+
+    <!-- Tello plugin for Gazebo -->
+
+    <gazebo>
+        <plugin name="TelloPlugin" filename="libTelloPlugin.so">
+            <namespace>${topic_ns}</namespace>
+            <parameter name="use_sim_time" type="bool">1</parameter>
+            <link_name>base_link</link_name>
+            <center_of_mass>0 0 0</center_of_mass>
+        </plugin>
+    </gazebo>
+    <gazebo>
+        <plugin name="ground_truth" filename="libgazebo_ros_p3d.so">
+       <frame_name>map</frame_name>
+       <body_name>base_link</body_name>
+       <ros>
+          <namespace>/${topic_ns}</namespace>
+          <!-- <remapping>odom:=p3d_test_deprecated</remapping> -->
+        </ros>
+       <!-- <topic_name>byebye</topic_name> -->
+       <update_rate>30.0</update_rate>
+      </plugin>
+    </gazebo>
+
+
+    <!-- ToF Ray Sensor Plugin -->
+    <gazebo reference="ray_link">
+        <sensor type="ray" name="tof_sensor">
+        <update_rate>20.0</update_rate>
+        <ray>
+            <scan>
+            <horizontal>
+                <samples>10</samples>
+                <resolution>1</resolution>
+                <min_angle>-0.2</min_angle>
+                <max_angle>0.2</max_angle>
+            </horizontal>
+            </scan>
+            <range>
+            <min>0.1</min>
+            <max>5.0</max>
+            <resolution>0.01</resolution>
+            </range>
+            <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+            </noise>
+        </ray>
+        <plugin name="gazebo_ros_range" filename="libgazebo_ros_range.so">
+            <topicName>tof_range</topicName>
+            <frameName>ray_link</frameName>
+        </plugin>
+        </sensor>
+    </gazebo>
+ 
+
+
+    <!-- Camera plugin for Gazebo -->
+    <!-- TODO use Tello camera specs -->
+    <!-- TODO add another joint and rotate the camera into place -->
+    <gazebo reference="camera_link">
+        <sensor type="camera" name="${topic_ns}">
+            <update_rate>30.0</update_rate>
+            <camera name="head">  <!-- TODO does this name do anything? -->
+                <horizontal_fov>0.96</horizontal_fov>
+                <image>
+                    <width>960</width>
+                    <height>720</height>
+                    <format>R8G8B8</format>
+                </image>
+                <clip>
+                    <near>0.1</near>
+                    <far>300</far>
+                </clip>
+                <noise>
+                    <type>gaussian</type>
+                    <!-- Noise is sampled independently per pixel on each frame.
+                         That pixel's noise value is added to each of its color
+                         channels, which at that point lie in the range [0,1]. -->
+                    <mean>0.0</mean>
+                    <stddev>0.007</stddev>
+                </noise>
+            </camera>
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0.0</updateRate>
+                <cameraName>this_is_ignored</cameraName>
+                <imageTopicName>image_raw</imageTopicName>
+                <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+                <frameName>camera_link</frameName>
+                <hackBaseline>0.07</hackBaseline>
+                <distortionK1>0.0</distortionK1>
+                <distortionK2>0.0</distortionK2>
+                <distortionK3>0.0</distortionK3>
+                <distortionT1>0.0</distortionT1>
+                <distortionT2>0.0</distortionT2>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+    <gazebo reference="imu_link">
+        <!-- IMU Configuration (Typical MEMS IMU like MPU-6000) -->
+        <sensor name="imu_sensor" type="imu">
+            <always_on>true</always_on>
+            <update_rate>250</update_rate>  <!-- Typical IMU update rate -->
+            <imu>
+                <noise type="gaussian">
+                    <!-- Gyroscope noise parameters -->
+                    <gyro>
+                        <noise type="gaussian">
+                            <mean>0.0</mean>
+                            <stddev>0.00017</stddev>  <!-- ~0.1 deg/s RMS (MPU-6000 spec) -->
+                            <bias_mean>0.00001</bias_mean>
+                            <bias_stddev>0.00001</bias_stddev>
+                            <dynamic_bias_stddev>0.00001</dynamic_bias_stddev>
+                        </noise>
+                    </gyro>
+                
+                    <!-- Accelerometer noise parameters -->
+                    <accel>
+                        <noise type="gaussian">
+                            <mean>0.0</mean>
+                            <stddev>0.003</stddev>  <!-- ~3 mg RMS (MPU-6000 spec) -->
+                            <bias_mean>0.1</bias_mean>
+                            <bias_stddev>0.001</bias_stddev>
+                            <dynamic_bias_stddev>0.001</dynamic_bias_stddev>
+                        </noise>
+                    </accel>
+                </noise>
+            </imu>
+        </sensor>
+    </gazebo>
+
+    <gazebo reference="gnss_link">
+        <!-- GPS (Typical u-blox M8N) -->
+        <sensor name="gps_sensor" type="gps">
+            <always_on>true</always_on>
+            <update_rate>5</update_rate>  <!-- Standard GPS update rate -->
+            <gps>
+                <position_sensing>
+                    <horizontal>
+                        <noise type="gaussian">
+                            <mean>0.0</mean>
+                            <stddev>1.5</stddev>  <!-- 1.5m horizontal accuracy -->
+                        </noise>
+                    </horizontal>
+                    <vertical>
+                        <noise type="gaussian">
+                            <mean>0.0</mean>
+                            <stddev>2.5</stddev>  <!-- 2.5m vertical accuracy -->
+                        </noise>
+                    </vertical>
+                </position_sensing>
+                
+                <velocity_sensing>
+                    <horizontal>
+                        <noise type="gaussian">
+                            <mean>0.0</mean>
+                            <stddev>0.1</stddev>  <!-- 0.1 m/s velocity noise -->
+                        </noise>
+                    </horizontal>
+                    <vertical>
+                        <noise type="gaussian">
+                            <mean>0.0</mean>
+                            <stddev>0.15</stddev>  <!-- 0.15 m/s vertical velocity noise -->
+                        </noise>
+                    </vertical>
+                </velocity_sensing>
+            </gps>
+        </sensor>
+    </gazebo>
+
+</robot>
