@@ -169,8 +169,8 @@ obstacle_avoidance():
 - `/leader/cmd_vel`
 - `/follower/status`
 
-## Leader logics
-This section explains the logics and functions of leader drone
+## Leader logic
+This section explains the logic and functions of leader drone in detail
 
 ### 1. Import
 ```python
