@@ -169,3 +169,121 @@ obstacle_avoidance():
 - `/leader/cmd_vel`
 - `/follower/status`
 
+## Leader logics
+This section explains the logics and functions of leader drone
+
+### 1. Import
+```python
+import rclpy
+from rclpy.node import Node
+from geometry_msgs.msg import Twist
+from nav_msgs.msg import Odometry
+from std_srvs.srv import Empty
+from sensor_msgs.msg import LaserScan
+import math
+import random
+```
+
+This section imports:
+
+- ROS 2 core functionality (`rclpy`, `Node`)
+
+- Message types:
+
+  - `Twist` → to send velocity commands to the drone
+
+  - `Odometry` → to get the drone’s current position
+
+  - `LaserScan` → to detect obstacles (fake Lidar)
+
+  - `Empty` → used for the simple `/land` service
+
+- Standard Python utilities like `math` for calculations and `random` for choosing avoidance direction
+
+### 2. Class and Constructor
+```python
+class LeaderFlightNode(Node):
+    def __init__(self):
+        super().__init__('leader_flight_node')
+  ---
+```
+
+- This sets up all ROS interfaces:
+
+  - Publishes to `cmd_vel` to move the drone.
+
+  - Listens to `ground_truth` for drone position.
+
+  - Listens to `scan` for obstacle data. (optional)
+
+  - Connects to `tello/land` to command a landing.
+
+- Internal state is initialized:
+
+  - `self.waypoints` = a list of positions to fly through.
+
+  - Flags for current waypoint index, obstacle detection, and whether the drone has landed.
+
+- A ROS timer is created to call the main flight control logic (`navigate`) every 0.1 seconds.
+
+### 3. Odometry callback
+```python
+def odom_callback(self, msg):
+    """Update current position from ground_truth topic."""
+    self.position = msg.pose.pose.position
+```
+Updates the drone's current position every time a new odometry message is received. This is used to calculate how far the drone is from the next waypoint.
+
+### 4. Obstacle detection (expanded)
+```python
+def scan_callback(self, msg):
+    center = msg.ranges[len(msg.ranges)//3: 2*len(msg.ranges)//3]
+    self.obstacle_detected = any(r < 3.0 for r in center if r > 0.01)
+    if self.obstacle_detected:
+        self.avoidance_direction = random.choice([-1, 1])
+```
+- This processes Lidar data from the front of the drone.
+- Checks if any obstacle is closer than 3 meters in front of the drone. If so, triggers an avoidance routine by choosing a random direction (left or right).
+
+### 5. Main Navigation
+```python
+def navigate(self):
+    """Main control loop for navigation."""
+    if self.position is None or self.current_index >= len(self.waypoints):
+        return
+    ---
+```
+This is the core movement logic:
+
+- Computes direction and distance to the current waypoint.
+
+- If close enough, moves to the next waypoint.
+
+- If an obstacle is detected, sidesteps instead of heading straight to the waypoint.
+
+- Publishes a `Twist` message with velocity commands based on direction.
+
+### 6. Landing
+```python
+def land(self)
+  """Stop movement and attempt landing."""
+  if self.landing_triggered:
+      return
+  ---
+```
+- Called when the drone finishes all waypoints.
+
+- Triggers a stop and calls the land service (if ready).
+
+- If land service isn’t available, the drone just stops and hovers.
+
+### Summary
+This code enables the leader drone in Gazebo to:
+
+- Navigate and fly to a list of altitude-specific waypoints
+
+- Avoid obstacles when detected
+
+- Land safely after completing its mission
+
+- Provide log output for mission status
