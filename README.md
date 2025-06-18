@@ -1,5 +1,10 @@
 # UAV Leader–Follower Formation Control in Gazebo (ARMRS 2025 - Group 12)
 
+## Group members:
+1. Mst Ayesha Sultana
+2. Abdullokh Orifjonov
+3. Long Vo
+
 ## Introduction
 
 This project demonstrates a **leader–follower drone formation control system** using ROS 2 and Gazebo simulation tools. Inspired by cost-optimized swarm logistics (e.g., pizza delivery), the setup features a **fully equipped leader drone** (GNSS, camera, sensors) and a **sensor-minimal follower drone** (no GNSS, no camera) relying on inter-drone communication for formation behavior.
@@ -74,6 +79,60 @@ Only base_link contains a simplified collision geometry for faster simulation:
   </geometry>
 </collision>
 ```
+
+### 5. Two ROS 2 Nodes
+
+#### LeaderHandshake Class
+
+A ROS 2 node for the leader drone to coordinate takeoff, movement, and distance messaging:
+
+* **Publishers**
+
+  * `/leader/follow_cmd` (String): sends "takeoff" commands to the follower
+  * `/leader/move_distance` (Float32): shares completed travel distance
+  * `/leader/cmd_vel` (Twist): drives the leader drone
+
+* **Subscriptions**
+
+  * `/follower/status` (String): listens for `ack_takeoff` from follower
+
+* **Service**
+
+  * `/leader/tello_action` (TelloAction): to take off the leader itself
+
+* **Behavior**
+
+  1. Repeatedly publish "takeoff" until the follower acknowledges
+  2. Trigger own takeoff service immediately
+  3. After ack, schedule 10 Hz forward moves (0.5 m/s for 20 steps = 10 m)
+  4. Publish the travelled distance to the follower
+
+*Ensures follower sync before movement and cleans up timers after use.*
+
+#### FollowerHandshake Class
+
+A ROS 2 node for the follower drone to mirror leader's commands:
+
+* **Subscriptions**
+
+  * `/leader/follow_cmd` (String): "takeoff"
+  * `/leader/move_distance` (Float32): distance to travel
+
+* **Publishers**
+
+  * `/follower/status` (String): sends `ack_takeoff`
+  * `/follower/cmd_vel` (Twist): drives the drone
+
+* **Service**
+
+  * `/follower/tello_action` (TelloAction): to take off
+
+* **Behavior**
+
+  1. On first "takeoff": send ack, call takeoff service
+  2. On distance message: schedule 10 Hz timed moves at 0.5 m/s
+
+*Handles each command once and cleans up timers after use.*
 
 ---
 
@@ -175,9 +234,13 @@ obstacle_avoidance():
 - `/leader/move_distance`
 - `/leader/cmd_vel`
 - `/follower/status`
+- `/follower/cmd_vel`
 
-# Leader logic - (This part is added separately in another branch named - Leader-take-off-and-fly)
-This section explains the logic and functions of leader drone in detail
+# Leader logic
+(This logic is added separately in another branch named - **Leader-take-off-and-fly**)
+
+
+This section explains the logic and functions of the leader drone in detail.
 
 ### 1. Import
 ```python
