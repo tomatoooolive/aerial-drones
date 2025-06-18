@@ -84,7 +84,14 @@ Only base_link contains a simplified collision geometry for faster simulation:
 - Mission cycle was simulated partially: only the takeoff stage was successful. The subsequent, delivery → return stages require further work.
 - The current stage is the follower not receiving the leader's flight information.
 
-## Control Logic
+### Leader-Follower drones in Gazebo
+![Diagram](images/multi-drone.png)
+
+### Screenshot on the two way communication between the drones
+![Diagram](images/log.png)
+
+
+# Control Logic
 This section summarizes the pseudocode governing drone behaviors.
 
 ### Leader Logic Pseudocode
@@ -287,3 +294,6 @@ This code enables the leader drone in Gazebo to:
 - Land safely after completing its mission
 
 - Provide log output for mission status
+
+
+
