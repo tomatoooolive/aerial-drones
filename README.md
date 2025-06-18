@@ -176,7 +176,7 @@ obstacle_avoidance():
 - `/leader/cmd_vel`
 - `/follower/status`
 
-## Leader logic
+# Leader logic - (This part is added separately in another branch named - Leader-take-off-and-fly)
 This section explains the logic and functions of leader drone in detail
 
 ### 1. Import
